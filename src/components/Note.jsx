@@ -1,17 +1,13 @@
 import React from "react";
-import notes from "../notes";
 
-const Note = () => {
+const Note = ({ id, title, content, onDelete }) => {
     return (
-        <>
-            {notes.map(note => (
-                <div key={note.id} className="note">
-                        <h1>{note.title}</h1>
-                        <p>{note.content}</p>
-                </div>
-            ))}
-        </>
-    )
-};
+      <div className="note">
+        <h1>{title}</h1>
+        <p>{content}</p>
+        {onDelete && <button onClick={() => onDelete(id)}>DELETE</button>}
+      </div>
+    );
+  };
 
 export default Note;
