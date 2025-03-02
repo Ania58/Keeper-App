@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import CreateArea from "./CreateArea";
 import NoteList from "./NoteList";
-import useNotes from "./useNotes";
+import useNotes from "../useNotes";
 import Footer from "./Footer";
 
 const App = () => {
