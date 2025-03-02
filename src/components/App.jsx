@@ -1,13 +1,17 @@
 import React from "react";
 import Header from "./Header";
-import Note from "./Note";
+import CreateArea from "./CreateArea";
+import NoteList from "./NoteList";
+import useNotes from "./useNotes";
 import Footer from "./Footer";
 
 const App = () => {
+    const { notes, addNote, deleteNote } = useNotes();
     return(
         <>
         <Header />
-        <Note />
+        <CreateArea onAdd={addNote} />
+        <NoteList notes={notes} onDelete={deleteNote} />
         <Footer />
         </>
     )
